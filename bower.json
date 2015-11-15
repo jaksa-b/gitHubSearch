@@ -1,0 +1,24 @@
+{
+  "name": "gitHubSearch",
+  "homepage": "https://github.com/jaksa-b/gitHubSearch",
+  "authors": [
+    "Jakša Bašić"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/static/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
