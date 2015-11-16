@@ -6,6 +6,8 @@ import requests, json
 
 def index(request):
     return HttpResponse('Hello World!')
+
+
 def profile(request):
     jsonList = []
     req = requests.get('https://api.github.com/users/jaksa-b')
@@ -14,6 +16,7 @@ def profile(request):
     userData = {}
     for data in jsonList:
         userData['name'] = data['name']
+        userData['blog'] = data['blog']
         userData['email'] = data['email']
         userData['public_gists'] = data['public_gists']
         userData['public_repos'] = data['public_repos']
@@ -22,4 +25,4 @@ def profile(request):
         userData['following'] = data['following']
 
     parsedData.append(userData)
-    return HttpResponse(parsedData)
+    return render(request, 'app/profile.html', {'data': parsedData})
