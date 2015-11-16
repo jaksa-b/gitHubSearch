@@ -11,6 +11,18 @@
 <body>
     <h1 class="text-center"> Github User Data </h1>
     <div class="col-lg-12">
+        <form id="login_form" method="post" action="/app/profile/">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="text" name="user" class="form-control" placeholder="Github User Name" value="" required autofocus>
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit">Get Data</button>
+                </span>
+            </div>
+          <br>
+        </form>
+    </div>
+    <div class="col-lg-12">
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped tablesorter">
                 <thead>
